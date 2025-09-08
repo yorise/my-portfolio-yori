@@ -42,7 +42,12 @@ export default function Experience() {
     <section
       ref={ref}
       id="experience"
-      className="flex flex-col items-center px-4 py-16"
+      className="
+        flex flex-col items-center px-4 py-16
+        bg-primary text-primary-foreground
+        dark:bg-foreground dark:text-primary-foreground
+      "
+      data-navbar="invert"
     >
       {/* Title */}
       <div className="w-full max-w-6xl text-center md:text-left">
@@ -63,7 +68,7 @@ export default function Experience() {
           initial={{ opacity: 0, x: -80 }}
           animate={isInView ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 1.2, delay: 0.7 }}
-          className="flex md:flex-col gap-4 md:gap-6 text-lg font-medium border-l-2 border-gray-200 pl-4 overflow-x-auto md:overflow-visible"
+          className="flex md:flex-col gap-4 md:gap-6 text-lg font-medium border-l-2 border-border pl-4 overflow-x-auto md:overflow-visible"
         >
           {Object.keys(experiences).map((company) => (
             <li
@@ -71,7 +76,7 @@ export default function Experience() {
               className={`cursor-pointer whitespace-nowrap transition-colors ${
                 selected === company
                   ? "text-chart-2 font-bold relative"
-                  : "text-gray-600 hover:text-gray-900"
+                  : "text-primary-foreground hover:text-chart-2"
               }`}
               onClick={() => setSelected(company)}
             >
@@ -99,8 +104,8 @@ export default function Experience() {
               <h3 className="text-2xl font-bold">
                 {experiences[selected].role}
               </h3>
-              <p className="text-gray-500">{experiences[selected].period}</p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-700">
+              <p className="opacity-80">{experiences[selected].period}</p>
+              <ul className="list-disc pl-6 space-y-2 text--primary-foreground">
                 {experiences[selected].details.map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}

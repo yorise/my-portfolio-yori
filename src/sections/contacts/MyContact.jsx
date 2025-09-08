@@ -44,7 +44,7 @@ export default function MyContact() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-sm sm:text-lg md:text-xl text-gray-700"
+          className="text-sm sm:text-lg md:text-xl text-primary"
         >
           Looking to partner or work together? Reach out through the form and
           I'll get back to you in the next 48 hours.
@@ -56,8 +56,9 @@ export default function MyContact() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 1, type: "spring" }}
-            href="mailto:awwalyori@gmail.com"
-            className="flex items-center gap-3 justify-center border-2 border-gray-300 rounded-lg px-4 py-2 hover:border-indigo-600 hover:text-indigo-600 transition"
+            target="_blank"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=awwalyori@gmail.com&su=Collaboration%20Opportunity&body=I%20am%20interested%20in%20discussing%20collaboration%20opportunities%20or%20projects.&tf=1"
+            className="flex items-center gap-3 justify-center border-2 border-gray-300 rounded-lg px-4 py-2 hover:border-chart-1 hover:text-chart-1 transition"
           >
             <Mail className="w-6 h-6" />
             <span>awwalyori@gmail.com</span>
@@ -67,10 +68,10 @@ export default function MyContact() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 1.2, type: "spring" }}
-            href="https://wa.me/6281918238908"
+            href="https://wa.me/6281918238908?text=Saya%20tertarik%20mendiskusikan%20peluang%20kerja%20sama%20atau%20project."
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-3 justify-center border-2 border-gray-300 rounded-lg px-4 py-2 hover:border-green-600 hover:text-green-600 transition"
+            className="flex items-center gap-3 justify-center border-2 border-gray-300 rounded-lg px-4 py-2 hover:border-chart-2 hover:text-chart-2 transition"
           >
             <Phone className="w-6 h-6" />
             <span>+62 819 182 389 08</span>
@@ -84,31 +85,31 @@ export default function MyContact() {
           transition={{ delay: 1.4 }}
           className="flex flex-col items-center lg:items-start gap-4 mt-6"
         >
-          <p className="text-sm sm:text-lg md:text-xl text-gray-700">
+          <p className="text-sm sm:text-lg md:text-xl text-primary">
             Follow me for more.
           </p>
           <div className="flex gap-4">
             <a
-              href="https://github.com/username"
+              href="https://github.com/yorise"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-indigo-600 transition"
+              className="hover:text-chart-1 transition"
             >
               <Github size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/username"
+              href="https://www.linkedin.com/in/awwal-yori-63187b356/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-indigo-600 transition"
+              className=" hover:text-chart-1 transition"
             >
               <Linkedin size={24} />
             </a>
             <a
-              href="https://instagram.com/username"
+              href="https://www.instagram.com/wwal.yori/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-600 hover:text-indigo-600 transition"
+              className=" hover:text-chart-1 transition"
             >
               <Instagram size={24} />
             </a>

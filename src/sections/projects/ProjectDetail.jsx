@@ -35,7 +35,7 @@ export default function ProjectDetail({ project }) {
           {project.title}
           <span className="text-chart-2">.</span>
         </h1>
-        <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl leading-relaxed">
           {project.description}
         </p>
       </motion.div>
@@ -63,7 +63,7 @@ export default function ProjectDetail({ project }) {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          <div className="flex justify-between text-gray-500 text-sm">
+          <div className="flex justify-between text-sidebar-ring text-sm">
             <span>Tools</span>
             <span>Year</span>
           </div>
@@ -72,7 +72,7 @@ export default function ProjectDetail({ project }) {
             <span className="font-semibold text-lg">{project.year}</span>
           </div>
           <div>
-            <span className="text-gray-500 text-sm">Type</span>
+            <span className="text-sidebar-ring text-sm">Type</span>
             <p className="font-semibold text-lg mt-1">{project.type}</p>
           </div>
         </motion.div>
@@ -99,7 +99,7 @@ export default function ProjectDetail({ project }) {
                 {section.content.map((para, pIdx) => (
                   <p
                     key={pIdx}
-                    className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed mb-4"
+                    className="text-base sm:text-lg md:text-xl leading-relaxed mb-4"
                   >
                     {para}
                   </p>

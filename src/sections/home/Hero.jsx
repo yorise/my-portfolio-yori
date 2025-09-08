@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useTyping } from "@/utils/typing";
 import { Button } from "@/components/ui/button";
+import { Handshake } from "lucide-react";
 
 export default function Hero() {
   const words = [
@@ -13,7 +14,7 @@ export default function Hero() {
   const text = useTyping(words, 60, 40, 1500);
 
   return (
-    <section className="h-screen flex flex-col md:flex-row-reverse justify-evenly items-center px-4 md:px-12 gap-8 md:gap-16">
+    <section className="h-screen flex flex-col-reverse md:flex-row-reverse justify-evenly items-center px-4 md:px-12 gap-8 md:gap-16">
       {/* Hero Image Section */}
       <div className="relative flex-shrink-0">
         {/* Lingkaran tipis */}
@@ -22,7 +23,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-            w-64 h-64 sm:w-80 sm:h-80 md:w-104 md:h-104 rounded-full border-2 border-sidebar-ring-400"
+            w-64 h-64 sm:w-80 sm:h-80 md:w-104 md:h-104 rounded-full border-2 border-sidebar-ring-700"
         />
 
         {/* Foto */}
@@ -39,14 +40,34 @@ export default function Hero() {
       {/* Content Section */}
       <div className="flex flex-col items-center md:items-start gap-4 md:gap-6 text-center md:text-left max-w-2xl">
         {/* Heading */}
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
-        >
-          Hi there, I’m Yori 👋🏻
-        </motion.h1>
+        <div className="flex items-center justify-center gap-5">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold"
+          >
+            Hi there, I’m Yori
+          </motion.h1>
+
+          {/* Motion icon */}
+          <motion.div
+            initial={{ scale: 0, rotate: -45, opacity: 0 }}
+            animate={{ scale: 1, rotate: 0, opacity: 1 }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 20,
+              delay: 0.5,
+            }}
+            whileHover={{
+              rotate: [0, 15, -15, 0],
+              transition: { duration: 0.6 },
+            }}
+          >
+            <Handshake size={40} />
+          </motion.div>
+        </div>
 
         {/* Typing Animation */}
         <motion.div
@@ -66,7 +87,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-md sm:text-lg md:text-xl lg:text-2xl text-gray-700"
+          className="text-md sm:text-lg md:text-xl lg:text-2xl "
         >
           Bringing ideas to life through code, creativity, and a touch of visual
           storytelling.
@@ -92,7 +113,10 @@ export default function Hero() {
             size="lg"
             className="cursor-pointer"
             onClick={() =>
-              (window.location.href = "https://github.com/username")
+              window.open(
+                "https://github.com/yorise/my-portfolio-yori",
+                "_blank"
+              )
             }
           >
             See Code

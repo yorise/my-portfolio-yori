@@ -9,22 +9,22 @@ export default function Footer() {
     {
       name: "GitHub",
       icon: <Github className="w-5 h-5" />,
-      href: "https://github.com/",
+      href: "https://github.com/yorise",
     },
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-5 h-5" />,
-      href: "https://linkedin.com/",
+      href: "https://www.linkedin.com/in/awwal-yori-63187b356/",
     },
     {
       name: "Instagram",
       icon: <Instagram className="w-5 h-5" />,
-      href: "https://instagram.com/",
+      href: "https://www.instagram.com/wwal.yori/",
     },
   ];
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-10 px-6 mt-16">
+    <footer className=" py-10 px-6 mt-16">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 justify-between items-start">
         {/* Brand & Buttons */}
         <motion.div
@@ -32,7 +32,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h3 className="text-2xl font-bold text-white mb-4">
+          <h3 className="text-2xl font-bold  mb-4">
             Interested in working together?
           </h3>
           <motion.div
@@ -42,7 +42,7 @@ export default function Footer() {
             className="flex flex-wrap gap-4"
           >
             <Button
-              variant="secondary"
+              variant="default"
               size="lg"
               className="cursor-pointer"
               onClick={() => (window.location.href = "/contacts")}
@@ -50,7 +50,7 @@ export default function Footer() {
               Get In Touch
             </Button>
             <Button
-              variant="light"
+              variant="outline"
               size="lg"
               className="cursor-pointer"
               onClick={() => (window.location.href = "/projects")}
@@ -73,7 +73,7 @@ export default function Footer() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-indigo-600 text-white transition-colors"
+              className="w-10 h-10 flex items-center justify-center rounded-full bg-sidebar-ring hover:bg-chart-1 text-white transition-colors"
             >
               {social.icon}
             </a>

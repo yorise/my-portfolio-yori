@@ -33,7 +33,7 @@ export default function Story() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-gray-700 text-lg sm:text-xl md:text-2xl lg:text-2xl max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-6xl text-center sm:text-left mb-3 sm:mb-5 md:mb-9"
+          className=" text-lg sm:text-xl md:text-2xl lg:text-2xl max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-6xl text-center sm:text-left mb-3 sm:mb-5 md:mb-9"
         >
           Hi, I’m Awwal Yori Fairuzy. My curiosity about technology sparked my
           love for programming when I first tried building a simple website.
@@ -46,7 +46,7 @@ export default function Story() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.4 }}
-          className="text-gray-700 text-lg sm:text-xl md:text-2xl lg:text-2xl max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-6xl text-center sm:text-left mb-3 sm:mb-5 md:mb-9"
+          className=" text-lg sm:text-xl md:text-2xl lg:text-2xl max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-6xl text-center sm:text-left mb-3 sm:mb-5 md:mb-9"
         >
           For me, being a developer isn’t just about writing code—it’s about
           creating solutions that people can actually use. I always strive to
@@ -57,7 +57,7 @@ export default function Story() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.6 }}
-          className="text-gray-700 text-lg sm:text-xl md:text-2xl lg:text-2xl max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-6xl text-center sm:text-left mb-3 sm:mb-5 md:mb-9"
+          className=" text-lg sm:text-xl md:text-2xl lg:text-2xl max-w-full sm:max-w-3xl md:max-w-4xl lg:max-w-6xl text-center sm:text-left mb-3 sm:mb-5 md:mb-9"
         >
           Outside of coding, I channel my passion through sports, especially
           weightlifting and martial arts. Through sports, I’ve learned

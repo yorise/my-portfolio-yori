@@ -41,7 +41,7 @@ export const SkillsCarousel = ({ items, direction = "ltr", speed = 50 }) => {
           <React.Fragment key={idx}>
             <span
               className="inline-flex items-center whitespace-nowrap px-4 py-2 
-              bg-black text-white rounded-lg text-sm font-medium"
+              bg-sidebar-accent rounded-lg text-sm font-medium"
             >
               {item}
             </span>

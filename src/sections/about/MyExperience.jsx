@@ -72,7 +72,7 @@ export default function MyExperience() {
               className="relative flex flex-col-reverse sm:flex-row items-start gap-6 sm:gap-8"
             >
               {/* Number */}
-              <div className="flex-shrink-0 text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 w-16 sm:w-20">
+              <div className="flex-shrink-0 text-4xl sm:text-5xl md:text-6xl font-extrabold text-foreground w-16 sm:w-20">
                 {exp.id}
               </div>
 
@@ -86,7 +86,7 @@ export default function MyExperience() {
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
                   {exp.company}
                 </h3>
-                <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed">
+                <p className="text-sidebar-ring text-base sm:text-lg md:text-xl leading-relaxed">
                   {exp.description}
                 </p>
               </div>
