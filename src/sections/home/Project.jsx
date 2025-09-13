@@ -13,7 +13,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Admin Dashboard Kontenova",
-      img: imgPath("Admin Dashboard Kontenova", "dashboard-page.png"),
+      img: imgPath("Admin Dashboard Kontenova", "dashboard-page.PNG"),
       span: "md:row-span-2",
     },
     {
@@ -23,17 +23,17 @@ export default function Projects() {
     },
     {
       title: "Concleanse",
-      img: imgPath("Concleanse", "hero-section.png"),
+      img: imgPath("Concleanse", "hero-section.PNG"),
       span: "",
     },
     {
       title: "Bank Sampah Matahari",
-      img: imgPath("Bank Sampah Matahari", "bank-sampah-page.png"),
+      img: imgPath("Bank Sampah Matahari", "bank-sampah-page.PNG"),
       span: "md:row-span-2",
     },
     {
       title: "FTracker Company Profile",
-      img: imgPath("FTracker Company Profile", "home-pc.png"),
+      img: imgPath("FTracker Company Profile", "home-pc.PNG"),
       span: "md:col-span-2",
     },
   ];
