@@ -72,7 +72,7 @@ export const projects = [
   },
   {
     title: "Search Engine API",
-    img: imgPath("Search Engine API", "main-section.PNG"),
+    img: imgPath("Search Engine API", "main-section.png"),
     description:
       "Electronic Product Search Engine API is a backend system that provides product search and management features for electronic items.",
     tools: "Node.js, Express, MySQL",
