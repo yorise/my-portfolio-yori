@@ -4,27 +4,38 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { slugify } from "@/utils/slugify";
 
 export default function Projects() {
+  const imgPath = (title, filename) =>
+    `/assets/images/${slugify(title)}/${filename}`;
+
   const projects = [
     {
-      title: "Project 1",
-      img: "/assets/images/logo.png",
+      title: "Admin Dashboard Kontenova",
+      img: imgPath("Admin Dashboard Kontenova", "dashboard-page.png"),
       span: "md:row-span-2",
     },
     {
-      title: "Project 2",
-      img: "/assets/images/logo.png",
+      title: "Search Engine API",
+      img: imgPath("Search Engine API", "main-section.png"),
       span: "md:col-span-2",
     },
-    { title: "Project 3", img: "/assets/images/logo.png", span: "" },
     {
-      title: "Project 4",
-      img: "/assets/images/logo.png",
+      title: "Concleanse",
+      img: imgPath("Concleanse", "hero-section.png"),
+      span: "",
+    },
+    {
+      title: "Bank Sampah Matahari",
+      img: imgPath("Bank Sampah Matahari", "bank-sampah-page.png"),
       span: "md:row-span-2",
     },
-    { title: "Project 5", img: "/assets/images/logo.png", span: "" },
-    { title: "Project 6", img: "/assets/images/logo.png", span: "" },
+    {
+      title: "FTracker Company Profile",
+      img: imgPath("FTracker Company Profile", "home-pc.png"),
+      span: "md:col-span-2",
+    },
   ];
 
   const ref = useRef(null);
@@ -57,16 +68,16 @@ export default function Projects() {
               duration: 0.6,
               delay: isInView ? index * 0.2 : 0,
             }}
-            className={project.span}
+            className={`${project.span} ${index > 2 ? "hidden md:block" : ""}`}
           >
-            <Card className="overflow-hidden rounded-xl shadow-md h-full">
+            <Card className="overflow-hidden rounded-xl shadow-md h-full group">
               <CardContent className="p-0 h-full relative">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 flex items-center justify-center text-white text-lg sm:text-xl font-semibold transition-opacity">
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-lg sm:text-xl font-semibold transition-opacity">
                   {project.title}
                 </div>
               </CardContent>

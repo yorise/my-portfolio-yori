@@ -15,7 +15,7 @@ export default function ProjectDetail({ project }) {
   return (
     <div className="max-w-6xl mx-auto py-20 px-4 sm:px-6 md:px-12">
       {/* Back Link */}
-      <div className="mb-6">
+      <div className="mb-6 hidden lg:block">
         <a
           href="/projects"
           className="text-chart-2 hover:underline text-lg sm:text-xl font-semibold"

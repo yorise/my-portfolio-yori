@@ -10,27 +10,36 @@ export default function Gallery({ items }) {
   return (
     <section className="p-4 sm:p-6 md:p-8">
       <div className="grid grid-cols-1 gap-4 sm:gap-6 md:gap-8">
-        {blocks.map((block, bIdx) =>
-          block.type === "two" ? (
-            <div
-              key={bIdx}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
-            >
-              {block.items.map((item, idx) => (
-                <div
-                  key={`${bIdx}-${idx}`}
-                  className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-md bg-gray-100"
-                >
-                  <Image
-                    src={item.img}
-                    alt={item.title || `Gallery ${idx + 1}`}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
-          ) : (
+        {blocks.map((block, bIdx) => {
+          if (block.type === "two") {
+            return (
+              <div
+                key={bIdx}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
+              >
+                {block.items.map((item, idx) =>
+                  item ? (
+                    <div
+                      key={`${bIdx}-${idx}`}
+                      className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-md bg-gray-100"
+                    >
+                      <Image
+                        src={item.img}
+                        alt={item.title || `Gallery ${idx + 1}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div key={`${bIdx}-${idx}`} />
+                  )
+                )}
+              </div>
+            );
+          }
+
+          // --- block.type "full"
+          return block.items[0] ? (
             <div
               key={`${bIdx}-full`}
               className="relative w-full aspect-[16/9] sm:aspect-[16/9] rounded-2xl overflow-hidden shadow-md bg-gray-100 col-span-1"
@@ -42,8 +51,8 @@ export default function Gallery({ items }) {
                 className="object-cover"
               />
             </div>
-          )
-        )}
+          ) : null;
+        })}
       </div>
     </section>
   );

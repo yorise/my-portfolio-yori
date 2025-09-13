@@ -36,7 +36,7 @@ export default function ProjectsList() {
               initial={{ opacity: 0, y: 80 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.15 }}
-              className="sticky top-35 mb-32"
+              className="sticky top-27 mb-32  h-full"
             >
               <Link href={`/projects/${slugify(project.title)}`}>
                 <motion.div
@@ -45,21 +45,26 @@ export default function ProjectsList() {
                     borderWidth: 1,
                     transition: { duration: 0.4, ease: "easeOut" },
                   }}
-                  className="bg-card rounded-xl border border-sidebar-ring overflow-hidden cursor-pointer"
+                  className="bg-card rounded-xl border border-sidebar-ring overflow-hidden cursor-pointer group"
                 >
-                  <CardContent className="p-0">
+                  <CardContent className="p-0 ">
                     <div className="w-full h-[400px] md:h-[500px] border-b border-sidebar-ring overflow-hidden">
                       <img
                         src={project.img}
                         alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-300"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
                       />
+                      <div className="absolute rounded-xl inset-0 bg-black/40 flex items-center justify-center opacity-0 group hover:opacity-100 transition-opacity duration-300">
+                        <span className="text-white text-xl md:text-2xl font-semibold">
+                          See More
+                        </span>
+                      </div>
                     </div>
-                    <div className="mt-6 p-6">
-                      <h2 className="text-4xl md:text-5xl font-bold mb-4">
+                    <div className="mt-6 p-6 min-h-[15rem] flex flex-col">
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                         {project.title}
                       </h2>
-                      <p className="text-xl md:text-2xl leading-relaxed">
+                      <p className="text-base sm:text-lg md:text-xl leading-relaxed flex-grow">
                         {project.description}
                       </p>
                     </div>

@@ -108,7 +108,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Links */}
       <motion.div
         initial={{ height: 0, opacity: 0 }}
         animate={
@@ -124,6 +124,7 @@ export default function Navbar() {
               <li key={href}>
                 <Link
                   href={href}
+                  onClick={() => setIsOpen(false)}
                   className={`font-bold transition-colors duration-300 ${
                     isActive
                       ? "text-chart-2"
