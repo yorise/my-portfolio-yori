@@ -27,7 +27,7 @@ export default function ProjectsList() {
       </motion.h1>
 
       <div className="relative">
-        {projects.map((project, index) => {
+        {[...projects].reverse().map((project, index) => {
           return (
             // Landing animation for each card
             <motion.div

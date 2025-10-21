@@ -6,7 +6,7 @@ const imgPath = (title, filename) =>
 export const projects = [
   {
     title: "Concleanse",
-    img: imgPath("Concleanse", "hero-section.PNG"),
+    img: imgPath("Concleanse", "concleanse-logo-big.svg"),
     description:
       "Concleanse is a company profile website created for a start-up providing professional cleaning services for tourist destinations.",
     tools: "HTML5, CSS3, Figma (Design)",
@@ -105,7 +105,7 @@ export const projects = [
   },
   {
     title: "Admin Dashboard Kontenova",
-    img: imgPath("Admin Dashboard Kontenova", "dashboard-page.PNG"),
+    img: imgPath("Admin Dashboard Kontenova", "logo-fc.png"),
     description:
       "Admin Dashboard Kontenova is a web-based platform built to manage content, users, and reports efficiently through an intuitive interface.",
     tools: "Next.js, Prisma, MySQL, TailwindCSS",
@@ -143,7 +143,7 @@ export const projects = [
   },
   {
     title: "Bank Sampah Matahari",
-    img: imgPath("Bank Sampah Matahari", "bank-sampah-page.PNG"),
+    img: imgPath("Bank Sampah Matahari", "bank-sampah-logo.jpg"),
     description:
       "Bank Sampah Matahari is a web application for managing waste collection, members, and transaction records.",
     tools: "Next.js, Prisma, MySQL, TailwindCSS",

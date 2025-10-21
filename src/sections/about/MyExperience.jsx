@@ -18,25 +18,29 @@ export default function MyExperience() {
       id: "01",
       role: "Student",
       company: "SMA A. Wahid Hasyim",
-      description: "Coming soon.",
+      description:
+        "Completed high school education with a focus on science and technology. Developed early interest in web development and digital innovation through extracurricular activities and personal projects.",
     },
     {
       id: "02",
       role: "Student",
       company: "CEP CCIT-FTUI",
-      description: "Coming soon.",
+      description:
+        "Studied Information Technology under an international program combining academic learning and industry-based training. Gained foundational skills in programming, databases, and software engineering.",
     },
     {
       id: "03",
       role: "Intern",
       company: "Pojok Satu Indonesia",
-      description: "Coming soon.",
+      description:
+        "Worked as a Web Developer Intern focusing on building Kontenova, a Learning Management System (LMS) for managing courses and modules. Developed the admin dashboard and implemented core features for content and user management using modern web technologies.",
     },
     {
       id: "04",
       role: "Student",
       company: "Trilogi University",
-      description: "Coming soon.",
+      description:
+        "Currently pursuing a degree in Informatics Engineering. Expanding knowledge in software development, system architecture, and UI/UX design while working on personal and collaborative web projects.",
     },
   ];
 

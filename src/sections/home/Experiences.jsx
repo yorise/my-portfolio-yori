@@ -6,34 +6,30 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 const experiences = {
   PojokSatu: {
     label: "Pojok Satu",
-    role: "Intern @ Pojok Satu",
-    period: "June 2025 - Present",
+    role: "Web Developer as Intern @ Pojok Satu",
+    period: "June 2025 - September 2025",
     details: [
-      "Developed and shipped highly interactive web applications for Apple Music using Ember.js",
-      "Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs",
-      "Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps",
+      "Developed an admin dashboard for Kontenova, a Learning Management System (LMS) used by internship content creators at Pojok Satu Indonesia.",
+      "Built core features for course and module management, enabling admins to create and organize learning content efficiently.",
+      "Implemented responsive UI components and backend integration for dynamic content updates using modern web technologies such as next.js.",
     ],
   },
-  Soon: {
-    label: "Soon",
-    role: "Software Engineer @",
-    period: "June 2025 - June 2025",
+  PersonalProject: {
+    label: "Personal Project",
+    role: "Fullstack Developer (Independent Project)",
+    period: "Present",
     details: [
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam animi possimus, necessitatibus saepe beatae autem, nisi reiciendis amet maiores optio vitae. Id enim voluptatem tenetur consequatur eveniet voluptate aliquam eos!",
-    ],
-  },
-  Past: {
-    label: "Past",
-    role: "Frontend Developer @",
-    period: "June 2024 - June 2024",
-    details: [
-      "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque dolore, impedit ab sequi dolores consequatur laboriosam, quasi, commodi quas nostrum expedita? Porro maxime modi odio officia iure aliquam similique ex.",
+      "Building a fullstack web application focused on modern design and scalability using Next.js, Prisma, and Tailwind CSS.",
+      "Implementing authentication, course management, and content editing features to enhance the learning experience.",
+      "Experimenting with deployment workflows using Vercel and optimizing database queries for better performance.",
     ],
   },
 };
 
 export default function Experience() {
-  const [selected, setSelected] = useState("PojokSatu");
+  const [selected, setSelected] = useState(
+    Object.keys(experiences).slice(-1)[0]
+  );
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -70,19 +66,21 @@ export default function Experience() {
           transition={{ duration: 1.2, delay: 0.7 }}
           className="flex md:flex-col gap-4 md:gap-6 text-lg font-medium border-l-2 border-border pl-4 overflow-x-auto md:overflow-visible"
         >
-          {Object.keys(experiences).map((company) => (
-            <li
-              key={company}
-              className={`cursor-pointer whitespace-nowrap transition-colors ${
-                selected === company
-                  ? "text-chart-2 font-bold relative"
-                  : "text-primary-foreground hover:text-chart-2"
-              }`}
-              onClick={() => setSelected(company)}
-            >
-              {experiences[company].label}
-            </li>
-          ))}
+          {Object.keys(experiences)
+            .reverse()
+            .map((company) => (
+              <li
+                key={company}
+                className={`cursor-pointer whitespace-nowrap transition-colors ${
+                  selected === company
+                    ? "text-chart-2 font-bold relative"
+                    : "text-primary-foreground hover:text-chart-2"
+                }`}
+                onClick={() => setSelected(company)}
+              >
+                {experiences[company].label}
+              </li>
+            ))}
         </motion.ul>
 
         {/* Detail Section */}
