@@ -174,26 +174,4 @@ export const projects = [
       { img: imgPath("Bank Sampah Matahari", "reports-page.PNG") },
     ],
   },
-  {
-    title: "Project 6",
-    img: "/assets/images/logo.PNG",
-    description:
-      "Project 6 focused on cloud integration (S3, Firebase, and Supabase).",
-    tools: "AWS S3, Firebase, Supabase",
-    type: "Cloud Integration",
-    year: "2025",
-    about: [
-      "The goal of this project was to simplify file and data management by leveraging popular cloud services.",
-      "The integration aimed to reduce server load while ensuring high availability and scalability.",
-    ],
-    challenges: [
-      "The challenge was integrating multiple cloud services into a single system without dependency conflicts.",
-      "Handling authentication, syncing, and permissions across providers also required extensive configuration.",
-    ],
-    results: [
-      "The application successfully implemented distributed storage with high reliability and cost efficiency.",
-      "It also provided a flexible architecture that could easily support future cloud providers.",
-    ],
-    photos: [{ img: "/assets/images/logo.PNG" }],
-  },
 ];
