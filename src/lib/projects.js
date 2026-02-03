@@ -150,7 +150,7 @@ export const projects = [
     type: "Web Application",
     year: "2025",
     about: [
-      "This project was developed to digitalize waste bank operations, making it easier to record, monitor, and manage recyclable waste transactions.",
+      "This is project was developed to digitalize waste bank operations, making it easier to record, monitor, and manage recyclable waste transactions.",
       "It provides features for registering members, tracking deposits and withdrawals of recyclable waste, and generating transaction reports.",
       "The system aims to improve efficiency for both administrators and members while supporting environmental sustainability efforts.",
     ],
