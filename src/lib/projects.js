@@ -174,4 +174,48 @@ export const projects = [
       { img: imgPath("Bank Sampah Matahari", "reports-page.PNG") },
     ],
   },
+  {
+    title: "Dashboard Admin Devluxor",
+    img: imgPath("Dashboard Admin Devluxor", "devluxor-logo.png"),
+    description:
+     "Dashboard Admin Devluxor is an internal marketplace administration system built to manage products, customers, orders, analytics, and activity tracking with structured business logic enforcement.",
+    tools: "Laravel, Laravel Sanctum, MySQL, React, TailwindCSS, Axios",
+    type: "Web Application",
+    year: "2026",
+    about: [
+      "This project was developed as a structured admin dashboard for a marketplace system, focusing not only on CRUD operations but also on business logic enforcement and realistic data lifecycle management.",
+      "The system includes secure authentication using Laravel Sanctum with session control and idle timeout handling to ensure protected access to all internal routes.",
+      "Order management was designed as monitoring-only, where admins cannot manually change order status. Instead, a dedicated order_status_histories table was implemented to track lifecycle stages such as pending, paid, shipped, completed, and cancelled in a structured and realistic manner.",
+      "The dashboard provides real-time analytics including total orders, revenue from completed transactions, new customers, active customers, and product distribution by category, supported by visual charts and monthly comparison indicators.",
+      "A generic activity log system was built to track changes across entities such as products and customers, including detailed diff tracking (before and after values) to maintain a transparent audit trail.",
+      "The system also includes an export feature with preview functionality, allowing administrators to verify filtered data before downloading Excel reports."
+   ],
+    challenges: [
+      "Designing a clean separation between activity logs and order lifecycle tracking to avoid mixing audit data with business status progression.",
+      "Implementing relational sorting (such as sorting products by category name) efficiently using database joins.",
+      "Preventing unnecessary updates by detecting unchanged data before saving and ensuring the activity log only records meaningful changes.",
+      "Handling dynamic UI state updates without requiring page refresh, especially for customer blocking, note updates, and log refreshes.",
+      "Structuring analytics logic to differentiate between range-based filtering and fixed monthly KPI comparisons while keeping the dashboard behavior consistent."
+  ],
+    results: [
+      "Successfully built a business-driven admin dashboard that enforces realistic marketplace workflows instead of allowing unrestricted manual control.",
+      "Created a reusable and structured activity log system with readable change history for better transparency and debugging.",
+      "Improved data visibility through analytics and visual reporting, making it easier to monitor marketplace performance.",
+      "Implemented a clean UI/UX flow using modals, confirmation dialogs, toast notifications, and drawer previews without page reloads.",
+      "Delivered a complete internal administration system that demonstrates backend architecture design, relational database handling, and frontend state management."
+    ],
+
+    photos: [
+      { img: imgPath("Dashboard Admin Devluxor", "login.PNG") },
+      { img: imgPath("Dashboard Admin Devluxor", "reset-password.PNG") },
+      { img: imgPath("Dashboard Admin Devluxor", "dashboard.PNG") },
+      { img: imgPath("Dashboard Admin Devluxor", "customer-list.PNG") },
+      { img: imgPath("Dashboard Admin Devluxor", "product-list.PNG") },
+      { img: imgPath("Dashboard Admin Devluxor", "order-list.PNG") },
+      { img: imgPath("Dashboard Admin Devluxor", "order-preview.PNG") },
+      { img: imgPath("Dashboard Admin Devluxor", "activity-log.PNG") },
+      { img: imgPath("Dashboard Admin Devluxor", "export-section.PNG") },
+      { img: imgPath("Dashboard Admin Devluxor", "export-preview.PNG") },
+    ],
+  },
 ];
