@@ -6,8 +6,10 @@ import PreviewModal from "./PreviewModal";
 
 export default function Gallery({ items }) {
   if (!items || items.length === 0) return null;
+  const [expanded, setExpanded] = useState(null);
+  const visibleItems = expanded ? items : items.slice(0, 4);
 
-  const blocks = generateGalleryBlocks(items);
+  const blocks = generateGalleryBlocks(visibleItems);
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
@@ -61,6 +63,17 @@ export default function Gallery({ items }) {
             ) : null;
           })}
         </div>
+
+        {items.length > 4 && (
+          <div className="flex justify-center mt-8">
+            <button
+              onClick={() => setActiveIndex(0)}
+              className="px-6 py-3 border border-chart-2 rounded-full font-semibold hover:bg-chart-2 hover:text-white transition"
+            >
+              {expanded ? "Show Less" : "View All Screens"}
+            </button>
+          </div>
+        )}
       </section>
 
       {activeIndex !== null && (

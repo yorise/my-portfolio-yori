@@ -117,6 +117,9 @@ export default function ProjectDetail({ project }) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+            Highlight
+          </h1>
           <Gallery items={project.photos} />
         </motion.div>
       )}
